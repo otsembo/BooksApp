@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="book"
+            type="com.otsembo.booksapp.adapters.Book" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -31,7 +33,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="BOOK TITLE"
+                android:text="@{book.title}"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:id="@+id/txtBookTitle"
@@ -43,6 +45,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@{book.date}"
                 tools:text="@tools:sample/date/ddmmyy"
                 android:textSize="16sp"
                 android:textStyle="italic"
@@ -56,6 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="@tools:sample/lorem/random"
+                android:text="@{book.desc}"
                 android:maxLines="4"
                 android:textSize="18sp"
                 android:id="@+id/txtBookDesc"
